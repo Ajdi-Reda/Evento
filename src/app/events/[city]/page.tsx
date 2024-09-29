@@ -13,7 +13,7 @@ const CityEvents = async ({ params }: cityEventsProps) => {
   const { city } = params;
 
   const response = await fetch(
-    "https://bytegrad.com/course-assets/projects/evento/api/events?city=austin"
+    `https://bytegrad.com/course-assets/projects/evento/api/events?city=${city}`
   );
   const events: EventoEvent[] = await response.json();
 
