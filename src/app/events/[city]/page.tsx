@@ -19,7 +19,7 @@ const CityEvents = async ({ params }: cityEventsProps) => {
 
   return (
     <main className="flex min-h-[110vh] flex-col items-center px-[20px] py-24">
-      <H1>
+      <H1 className="mb-24">
         {city === "all"
           ? "All events"
           : `Event in ${city.charAt(0).toUpperCase() + city.slice(1)}`}
