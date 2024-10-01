@@ -1,6 +1,5 @@
 import H1 from "@/components/h1";
-import { getEvent } from "@/lib/utils";
-import { EventoEvent } from "@prisma/client";
+import { getEvent } from "@/lib/server-utils";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -22,7 +21,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const EventDetails = async ({ params }: Props) => {
   const { slug } = params;
   const event = await getEvent(slug);
-  console.log(event);
   return (
     <main>
       <section className="relative overflow-hidden flex justify-center items-center py-14 md:py-20">
